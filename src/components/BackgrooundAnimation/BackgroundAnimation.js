@@ -199,7 +199,7 @@ const BackgroundAnimation = () => (
         rx="1.07433"
         ry="1.07306"
         transform="translate(-476.525 -363.313) rotate(90 476.525 363.313)"
-        fill="#13ADC7"
+        fill="#6B5B95"
       >
         <animateMotion
           dur="12s"
@@ -321,8 +321,8 @@ const BackgroundAnimation = () => (
           y2="276.118"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#13ADC7" />
-          <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
+          <stop stopColor="#6B5B95" />
+          <stop offset="1" stopColor="#6B5B95" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint9_linear"
@@ -332,8 +332,8 @@ const BackgroundAnimation = () => (
           y2="291.454"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#13ADC7" />
-          <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
+          <stop stopColor="#6B5B95" />
+          <stop offset="1" stopColor="#6B5B95" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint10_linear"
@@ -354,8 +354,8 @@ const BackgroundAnimation = () => (
           y2="338.272"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#13ADC7" />
-          <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
+          <stop stopColor="#6B5B95" />
+          <stop offset="1" stopColor="#6B5B95" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

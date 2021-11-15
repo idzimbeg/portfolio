@@ -3,7 +3,7 @@ export const projects = [
     title: 'Expense Manager',
     description: "Using React, Expense manager was created. You'll be able to input your expenses and income for each month of the year. It also comes with simple graph animation that will color those grim moments when you realize how much money you spend on toilet paper",
       image: '/images/Expense-tracker.png',
-      tags: ['JS', 'React', 'Node.js'],
+      tags: ['JS', 'React', 'CSS'],
     source: 'https://github.com/idzimbeg/expenses_app',
     visits: 'https://simple-expenses-manager-app.netlify.app/',
     id: 0,
@@ -20,8 +20,7 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2021, text: 'Started my journey', },
-  { year: 2021, text: 'Working as a freelance developer', },
-  { year: 2021, text: 'Growing on!', }
+  { year: 2021, text: 'Started my journey', }
+
 ];
 

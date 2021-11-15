@@ -4,8 +4,8 @@ import { Section, SectionTitle } from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxNum, BoxText } from './AccomplishmentsStyles';
 
 const data = [
-  { number: 10, text: 'Projects'},
-  { number: 2, text: 'Algebra Courses', },
+  { number: 3, text: 'Example Projects'},
+  { number: 1, text: 'Algebra Courses', },
   { number: 3, text: 'Udemy Courses', },
 ];
 
@@ -15,7 +15,7 @@ const Accomplishments = () => (
    <Boxes>
      {data.map((card, index) => (
        <Box key={index}>
-         <BoxNum>{card.number}+</BoxNum>
+         <BoxNum>{card.number}</BoxNum>
          <BoxText>{card.text}</BoxText>
       </Box>
      ))}
