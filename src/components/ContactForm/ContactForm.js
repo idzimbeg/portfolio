@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { send } from "emailjs-com";
 
-import { SectionText } from "../../styles/GlobalComponents";
+import {
+  Form,
+  Backdrop,
+  Close,
+  CloseButton,
+  Input,
+  Textarea,
+} from "./ContactFormStyles.js";
 import Button from "../../styles/GlobalComponents/Button";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
   const [toSend, setToSend] = useState({
     from_name: "",
     message: "",
     reply_to: "",
   });
 
-  const onSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     send(
       "service_crmg3lf",
@@ -26,7 +33,6 @@ const ContactForm = () => {
           message: "",
           reply_to: "",
         });
-        alert("Thank You for reaching out, I'll be answering You shortly");
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -35,10 +41,14 @@ const ContactForm = () => {
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
+
   return (
-    <form action="" onSubmit={onSubmit}>
-      <SectionText>
-        <input
+    <Backdrop>
+      <Form action="" onSubmit={handleOnSubmit}>
+        <Close>
+          <CloseButton href="#" onClick={props.onClose} />
+        </Close>
+        <Input
           type="text"
           name="from_name"
           placeholder="Your name"
@@ -46,9 +56,7 @@ const ContactForm = () => {
           onChange={handleChange}
           required
         />
-      </SectionText>
-      <SectionText>
-        <textarea
+        <Textarea
           rows="5"
           cols="20"
           type="text"
@@ -57,10 +65,8 @@ const ContactForm = () => {
           value={toSend.message}
           onChange={handleChange}
           required
-        ></textarea>
-      </SectionText>
-      <SectionText>
-        <input
+        ></Textarea>
+        <Input
           type="text"
           name="reply_to"
           placeholder="Your email"
@@ -68,11 +74,9 @@ const ContactForm = () => {
           onChange={handleChange}
           required
         />
-      </SectionText>
-      <Button type="submit">
-        Send
-      </Button>
-    </form>
+        <Button>Send</Button>
+      </Form>
+    </Backdrop>
   );
 };
 

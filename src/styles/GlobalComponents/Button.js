@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import { ButtonBack, ButtonFront } from './index'
+import { ButtonBack, ButtonFront } from "./index";
 
 const Button = (props) => (
   <ButtonBack alt={props.alt} form={props.form} disabled={props.disabled}>{props.children}
@@ -8,4 +8,4 @@ const Button = (props) => (
   </ButtonBack>
 );
 
-export default Button
+export default Button;

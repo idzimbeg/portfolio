@@ -5,7 +5,7 @@ import {
   AiFillGithub,
   AiFillLinkedin,
 } from "react-icons/ai";
-import { VscGitMerge } from 'react-icons/vsc';
+import { VscGitMerge } from "react-icons/vsc";
 
 import {
   Container,
@@ -14,6 +14,7 @@ import {
   Div3,
   NavLink,
   SocialIcons,
+  Span,
 } from "./HeaderStyles";
 
 const Header = () => (
@@ -24,10 +25,10 @@ const Header = () => (
           style={{
             display: "flex",
             alignItems: "center",
-            color: "white"
+            color: "white",
           }}
         >
-          <VscGitMerge size="3rem" /> <span>Portfolio</span>
+          <VscGitMerge size="3rem" color="#2C3F59" /> <Span>Portfolio</Span>
         </a>
       </Link>
     </Div1>

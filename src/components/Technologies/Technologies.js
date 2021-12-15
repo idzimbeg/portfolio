@@ -1,7 +1,7 @@
-import React from 'react';
-import { DiCssTricks, DiNodejsSmall, DiReact } from 'react-icons/di';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
+import React from "react";
+import { DiCssTricks, DiNodejsSmall, DiReact } from "react-icons/di";
+import { Section, SectionDivider, SectionText, SectionTitle } from "../../styles/GlobalComponents";
+import { List, ListContainer, ListItem, ListParagraph, ListTitle } from "./TechnologiesStyles";
 
 const Technologies = () =>  (
 <Section id="tech">
@@ -9,7 +9,7 @@ const Technologies = () =>  (
   <br />
   <SectionTitle>Technologies</SectionTitle>
   <SectionText>
-    I've used technologies, tools and libraries in front-end web development world. I have modest experience using socket.io, express, axios, redux to name the few. Also, I've somewhat used version control with git and deployed my example sites with netlify and heroku.
+    I've used technologies, tools and libraries in front-end web development world. I have experience using Redux, Next.js, axios, fetch API, styled-components to name the few. Also, I'm enthused about team work with version control, git and sites deployment with netlify and heroku.
   </SectionText>
   <List>
     <ListItem>

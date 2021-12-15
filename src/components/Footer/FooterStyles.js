@@ -2,7 +2,9 @@ import styled from "styled-components"
 
 export const FooterWrapper = styled.section`
 	width: calc(100vw - 96px);
+	background: #4EBFB4;
   max-width: 1040px;
+  border-radius: 15px 5px 15px 5px;
   padding: 2rem 48px 40px;
   margin: 1rem auto;
   box-sizing: content-box;
@@ -17,14 +19,14 @@ export const FooterWrapper = styled.section`
 export const LinkItem = styled.a`
 	font-size: 18px;
 	line-height: 30px;
-	color: rgba(255, 255, 255, 0.75);
+	color: #2C3F59;
 	margin-bottom: 16px;
 	transition: .3s ease;
 	position: relative;
 	left: 0;
 
 	&:hover {
-		color: #fff;
+		color: #0D6973;
 		left: 6px;
 	}
 
@@ -82,7 +84,7 @@ export const CompanyContainer = styled.div`
 
 
 export const Slogan = styled.p`
-	color: rgba(255, 255, 255, 0.5);
+	color: #2C3F59;
 	min-width: 280px;
 	letter-spacing: 0.02em;
 	font-size: 18px;
@@ -111,8 +113,6 @@ export const SocialContainer = styled.div`
 		flex-wrap: wrap;
 	}
 `
-
-
 export const LinkList = styled.ul`
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: grid;
@@ -148,7 +148,7 @@ export const LinkTitle = styled.h4`
 	font-size: 12px;
 	line-height: 24px;
 	text-transform: uppercase;
-	color: rgba(255, 255, 255, 0.4);
+	color: #0D6973;
 	margin-bottom: 16px;
 
 	@media ${props => props.theme.breakpoints.sm} {
