@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
-  background: #0d6973;
   padding: 1rem;
   list-style: none;
   display: flex;
-  border-radius: 10px;
+  border-radius: 15px;
   justify-content: space-between;
   height: 65rem;
 
@@ -15,7 +14,7 @@ export const CarouselContainer = styled.ul`
     margin-left: 0px;
   }
 
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -38,7 +37,7 @@ export const CarouselItem = styled.div`
   background: #37a6a6;
   border-radius: 15px;
   padding: 1rem;
-  width: 90%;
+  width: 75%;
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 50%;

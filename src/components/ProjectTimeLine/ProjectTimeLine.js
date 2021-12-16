@@ -34,7 +34,7 @@ const ProjectTimeLine = () => {
 
     if (carouselRef.current) {
       const scrollLeft = Math.floor(
-        carouselRef.current.scrollWidth * 0.7 * (i / projects.length)
+        carouselRef.current.scrollWidth * 0.8 * (i / projects.length)
       );
 
       scroll(carouselRef.current, scrollLeft);
@@ -45,7 +45,7 @@ const ProjectTimeLine = () => {
     if (carouselRef.current) {
       const index = Math.round(
         (carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) *
-          0.7 *
+          0.8 *
           projects.length
       );
 
