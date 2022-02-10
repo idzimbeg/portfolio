@@ -48,6 +48,7 @@ const ContactForm = (props) => {
         <Close>
           <CloseButton href="#" onClick={props.onClose} />
         </Close>
+        <br />
         <Input
           type="text"
           name="from_name"
@@ -74,6 +75,7 @@ const ContactForm = (props) => {
           onChange={handleChange}
           required
         />
+        <br />
         <Button>Send</Button>
       </Form>
     </Backdrop>

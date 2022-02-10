@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const CarouselContainer = styled.ul`
-  max-width: 1040px;
-  padding: 1rem;
+  max-width: 940px;
+  padding: 2rem;
   list-style: none;
   display: flex;
   border-radius: 15px;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 65rem;
 
   margin-left: 32px;
@@ -34,10 +34,11 @@ export const CarouselMobileScrollNode = styled.div`
 `;
 
 export const CarouselItem = styled.div`
-  background: #37a6a6;
+  background: white;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); 
   border-radius: 15px;
-  padding: 1rem;
-  width: 75%;
+  padding: 2rem;
+  width: 70%;
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 50%;
@@ -46,7 +47,7 @@ export const CarouselItem = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     margin-left: 32px;
     min-width: 75%;
-    background: #37a6a6;
+    background: #FFF;
     padding: 4px;
     align-content: start;
     scroll-snap-align: start;
@@ -68,8 +69,8 @@ export const CarouselItemTitle = styled.h4`
   display: flex;
   background: linear-gradient(
     121.57deg,
-    #ffffff 10%,
-    rgba(255, 255, 255, 0.66) 30.15%
+    #4EBFB4 10%,
+    rgba(255, 255, 255, 0.75) 53.15%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -86,27 +87,12 @@ export const CarouselItemTitle = styled.h4`
     line-height: 24px;
   }
 `;
-export const CarouselItemImg = styled.svg`
-  margin-left: 21px;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  );
-  width: 50%;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    -webkit-mask-image: none;
-    margin-left: 16px;
-    overflow: visible;
-  }
-`;
 
 export const CarouselItemText = styled.p`
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.75);
+  color: #4EBFB4;
   padding-right: 16px;
   text-align: justify;
 
@@ -160,9 +146,9 @@ export const CarouselButtonDot = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 75%;
+  width: 100%;
   height: 45%;
-  object-fit: cover;
+  object-fit: center;
   border-radius: 10px;
   overflow: hidden;
 `;

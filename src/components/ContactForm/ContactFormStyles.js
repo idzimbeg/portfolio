@@ -7,22 +7,23 @@ export const Backdrop = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 20;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #dedede90;
   `
 
 export const Form = styled.form `
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-items: space-around;
   align-items: center;
-  top: 15vh;
+  top: 10vh;
   left: 10%;
   right: 15%;
   width: 70%;
-  background-color: #D5F2ED;
-  padding: 1rem;
+  background-color: white;
+  padding: 5rem;
   border-radius: 25px 5px 25px 5px;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); 
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -37,20 +38,26 @@ export const Form = styled.form `
   }
   `
   export const Input = styled.input`
-  border: 10px solid #D5F2ED;
-  border-radius: 20px;
+  border: #dedede;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); 
+  outline: none;
   height: 5rem;
-  width: 75%;
+  width: 100%;
   left: 5%;
   right 5%;
+  padding: 2rem;
+
   `
   export const Textarea = styled.textarea`
-  border: 10px solid #D5F2ED;
-  border-radius: 20px;
+  border: #dedede;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); 
+  resize: none;
+  outline: none;
   height: 20rem;
-  width: 75%;
+  width: 100%;
   left: 5%;
   right 5%;
+  padding: 2rem;
   `
 
   export const Close = styled.div`

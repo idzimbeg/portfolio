@@ -56,7 +56,7 @@ export const NavLink = styled.a`
   color: #2c3f59;
   transition: 0.4s ease;
   &:hover {
-    color: #37a6a6;
+    color: #0d6973;
     opacity: 1;
     cursor: pointer;
   }
@@ -116,7 +116,7 @@ export const SocialIcons = styled.a`
   border-radius: 50px;
   padding: 8px;
   &:hover {
-    background-color: #4ebfb4;
+    background-color: #dedede;
     transform: scale(1.2);
     cursor: pointer;
   }

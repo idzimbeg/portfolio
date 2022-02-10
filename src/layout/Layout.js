@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import { Container } from "./LayoutStyles";
+import { Ball, Container, LoadingDisplay } from "./LayoutStyles";
 
-export const Layout = ({children}) => {
-  return (
+export const Layout = ({ children }) => {
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsHidden(true);
+    }, 1200);
+  }, []);
+
+  return isHidden ? (
     <Container>
-     <Header/>
-     <main>{children}</main> 
-     <Footer/>
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </Container>
-  )
-}
+  ) : (
+    <LoadingDisplay>
+      <Ball />
+    </LoadingDisplay>
+  );
+};

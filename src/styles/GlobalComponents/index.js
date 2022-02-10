@@ -30,9 +30,9 @@ export const SectionTitle = styled.h2`
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  background: linear-gradient(121.57deg, #2C3F59 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: #0D6973;
+  -webkit-text-fill-color: #2C3F59;
   margin-bottom: 16px;
   padding: ${(props) => props.main ? '58px 0 16px' : '0'};
 
@@ -60,7 +60,7 @@ export const SectionText = styled.p`
   line-height: 40px;
   font-weight: 300;
   padding-bottom: 3.6rem;
-  color: #2C3F59;
+  color: #4EBFB4;
   text-align: justify;
 
 
@@ -139,12 +139,12 @@ export const SecondaryBtn = styled.button`
 
   &:hover {
     color: #37A6A6;
-    background: #fff;
+    background: #4EBFB4;
     border: 1px solid #fff;
   }
 
   &:active {
-    background: #e0e4eb;
+    background: #4EBFB4;
     border: 1px solid #304169;
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
@@ -179,7 +179,8 @@ export const ButtonBack = styled.div`
   justify-content: center;
   margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
   color: #fff;
-  background: ${({ alt }) => alt ? 'linear-gradient(90deg, rgba(44,63,89,1) 0%, rgba(55,166,166,1) 35%, rgba(213,242,237,1) 100%)' : 'linear-gradient(90deg, rgba(44,63,89,1) 35%, rgba(55,166,166,1) 86%, rgba(213,242,237,1) 100%)'};
+  background: #4EBFB4;
+  // ${({ alt }) => alt ? 'linear-gradient(90deg, rgba(44,63,89,1) 0%, rgba(55,166,166,1) 35%, rgba(213,242,237,1) 100%)' : 'linear-gradient(90deg, rgba(44,63,89,1) 35%, rgba(55,166,166,1) 86%, rgba(213,242,237,1) 100%)'};
   cursor: pointer;
   transition: 0.5s ease;
   position: relative;
@@ -211,7 +212,8 @@ export const ButtonFront = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(90deg, rgba(44,63,89,1) 0%, rgba(55,166,166,1) 49%, rgba(213,242,237,1) 100%)' : 'linear-gradient(90deg, rgba(44,63,89,1) 0%, rgba(55,166,166,1) 50%, rgba(78,191,180,1) 88%)'};
+  background: #4EBFB4;
+  // ${({ alt }) => alt ? 'linear-gradient(90deg, rgba(44,63,89,1) 0%, rgba(55,166,166,1) 49%, rgba(213,242,237,1) 100%)' : 'linear-gradient(90deg, rgba(44,63,89,1) 0%, rgba(55,166,166,1) 50%, rgba(78,191,180,1) 88%)'};
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
   transition: .4s ease;
   font-size: ${({ alt }) => alt ? '20px' : '24px'};
@@ -229,14 +231,18 @@ export const ButtonFront = styled.button`
   }
   &:active {
     opacity: 1;
-    box-shadow: inset 0px 3px 7px #d6d6e7;
+    // box-shadow: inset 0px 3px 7px #d6d6e7;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); 
+
     transform: translateY(2px);
   }
 
   &:disabled{
     background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
     opacity: 0.5;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); 
+
+    // box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
 
   @media ${(props) => props.theme.breakpoints.md} {

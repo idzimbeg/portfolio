@@ -64,23 +64,24 @@ const ProjectTimeLine = () => {
     <Section id="projects">
       <SectionTitle main>Example projects</SectionTitle>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        <>
-          {projects.map(
-            ({ id, image, title, description, tags, source, visits }) => (
+        {projects.map(
+          ({ index, image, title, description, tags, source, visits }) => (
+            <>
               <CarouselMobileScrollNode
-                key={id}
-                final={id === TOTAL_CAROUSEL_COUNT - 1}
+                key={index}
+                final={index === TOTAL_CAROUSEL_COUNT - 1}
               >
                 <CarouselItem
-                  key={id}
-                  index={`carousel__item-${id}`}
+                  key={index}
+                  id={`carousel__item-${index}`}
                   active={activeItem}
-                  onClick={(e) => handleClick(e, id)}
+                  // onClick={(e) => handleClick(e, index)}
                 >
                   <CarouselItemTitle>{title}</CarouselItemTitle>
                   <Img src={image} />
                   <CarouselItemText>{description}</CarouselItemText>
                   <div>
+                    <br />
                     <TitleContent>Stack</TitleContent>
                     <TagList>
                       {tags.map((tag, i) => (
@@ -94,9 +95,9 @@ const ProjectTimeLine = () => {
                   </UtilityList>
                 </CarouselItem>
               </CarouselMobileScrollNode>
-            )
-          )}
-        </>
+            </>
+          )
+        )}
       </CarouselContainer>
       <CarouselButtons>
         {projects.map((item, index) => (
