@@ -9,6 +9,26 @@ export const projects = [
     id: 1
   },
   {
+    title: "ShamRock!",
+    description:
+      "Top songs chart created using React. In app you can fetch most recent and most popular songs and sort them by duration. More information on every song can be reached via dynamic modal component. Use https://cors-anywhere.herokuapp.com/ to enable cross-origin requests to anywhere.",
+    image: "/images/shamrock.png",
+    tags: ["React", "Deezer API", "Material UI"],
+    source: "https://github.com/idzimbeg/clover-tunes",
+    visits: "https://cloverock.netlify.app/",
+    id: 2,
+  },
+  {
+    title: "WebShop app",
+    description:
+      "Webshop app which allows you to add items to your cart, send order and use discounts.",
+    image: "/images/webshop.png",
+    tags: ["React", "Firebase", "Material UI"],
+    source: "https://github.com/idzimbeg/webshop",
+    visits: "https://webshop-react-app.netlify.app/",
+    id: 3,
+  },
+  {
     title: "Sprehapp",
     description:
       "This is a code repository for the corresponding chat-app that was created using socket.io and simple unique Room Id. All participants are able to communicate when Room is shared",
@@ -16,7 +36,7 @@ export const projects = [
     tags: ["React", "Socket.io", "Node.js"],
     source: "https://github.com/idzimbeg/sprehapp",
     visits: "https://sprehapp.netlify.app/",
-    id: 2,
+    id: 4,
   },
   {
     title: "Expense Manager",
@@ -26,6 +46,6 @@ export const projects = [
     tags: ["JS", "React", "CSS"],
     source: "https://github.com/idzimbeg/expenses_app",
     visits: "https://simple-expenses-manager-app.netlify.app/",
-    id: 3,
+    id: 5,
   }
 ];
