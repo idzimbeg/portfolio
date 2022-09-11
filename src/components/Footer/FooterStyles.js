@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.section`
   width: calc(100vw - 96px);
-  background: white;
+  background: #01111c;
   box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
   max-width: 1040px;
   border-radius: 15px 5px 15px 5px;
@@ -26,7 +26,7 @@ export const LinkItem = styled.a`
   left: 0;
 
   &:hover {
-	color: #2c3f59;
+    color: #2c3f59;
     left: 6px;
   }
 

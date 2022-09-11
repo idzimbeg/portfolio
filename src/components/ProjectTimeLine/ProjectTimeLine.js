@@ -34,7 +34,7 @@ const ProjectTimeLine = () => {
 
     if (carouselRef.current) {
       const scrollLeft = Math.floor(
-        carouselRef.current.scrollWidth * 0.8 * (i / projects.length)
+        carouselRef.current.scrollWidth * (i / projects.length)
       );
 
       scroll(carouselRef.current, scrollLeft);
@@ -63,42 +63,6 @@ const ProjectTimeLine = () => {
   return (
     <Section id="projects">
       <SectionTitle main>Example projects</SectionTitle>
-      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        {projects.map(
-          ({ index, image, title, description, tags, source, visits }) => (
-            <>
-              <CarouselMobileScrollNode
-                key={index}
-                final={index === TOTAL_CAROUSEL_COUNT - 1}
-              >
-                <CarouselItem
-                  key={index}
-                  id={`carousel__item-${index}`}
-                  active={activeItem}
-                  // onClick={(e) => handleClick(e, index)}
-                >
-                  <CarouselItemTitle>{title}</CarouselItemTitle>
-                  <Img src={image} />
-                  <CarouselItemText>{description}</CarouselItemText>
-                  <div>
-                    <br />
-                    <TitleContent>Stack</TitleContent>
-                    <TagList>
-                      {tags.map((tag, i) => (
-                        <Tag key={i}>{tag}</Tag>
-                      ))}
-                    </TagList>
-                  </div>
-                  <UtilityList>
-                    <ExternalLinks href={visits}>Code</ExternalLinks>
-                    <ExternalLinks href={source}>Source</ExternalLinks>
-                  </UtilityList>
-                </CarouselItem>
-              </CarouselMobileScrollNode>
-            </>
-          )
-        )}
-      </CarouselContainer>
       <CarouselButtons>
         {projects.map((item, index) => (
           <CarouselButton
@@ -112,6 +76,38 @@ const ProjectTimeLine = () => {
           </CarouselButton>
         ))}
       </CarouselButtons>
+      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
+        {projects.map(({ index, title, description, tags, source, visits }) => (
+          <>
+            <CarouselMobileScrollNode
+              key={index}
+              final={index === TOTAL_CAROUSEL_COUNT}
+            >
+              <CarouselItem
+                key={index}
+                id={`carousel__item-${index}`}
+                active={activeItem}
+              >
+                <CarouselItemTitle>{title}</CarouselItemTitle>
+                <CarouselItemText>{description}</CarouselItemText>
+                <div>
+                  <br />
+                  <TitleContent>Stack</TitleContent>
+                  <TagList>
+                    {tags.map((tag, i) => (
+                      <Tag key={i}>{tag}</Tag>
+                    ))}
+                  </TagList>
+                </div>
+                <UtilityList>
+                  <ExternalLinks href={visits}>Code</ExternalLinks>
+                  <ExternalLinks href={source}>Source</ExternalLinks>
+                </UtilityList>
+              </CarouselItem>
+            </CarouselMobileScrollNode>
+          </>
+        ))}
+      </CarouselContainer>
     </Section>
   );
 };
