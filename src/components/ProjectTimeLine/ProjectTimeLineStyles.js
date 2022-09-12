@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CarouselContainer = styled.ul`
-  max-width: 720px;
+  max-width: 800px;
   padding: 2rem;
   list-style: none;
   display: flex;
@@ -40,7 +40,7 @@ export const CarouselItem = styled.div`
   box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   padding: 2rem;
-  width: 46%;
+  width: 75%;
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 50%;
@@ -204,7 +204,6 @@ export const ExternalLinks = styled.a`
 
 export const TagList = styled.ul`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;

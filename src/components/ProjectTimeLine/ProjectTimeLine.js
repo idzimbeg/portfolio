@@ -7,7 +7,6 @@ import {
   TagList,
   TitleContent,
   UtilityList,
-  Img,
   CarouselButton,
   CarouselButtonDot,
   CarouselButtons,
@@ -66,7 +65,7 @@ const ProjectTimeLine = () => {
       <CarouselButtons>
         {projects.map((item, index) => (
           <CarouselButton
-            key={index}
+            key={item.id}
             index={index}
             active={activeItem}
             onClick={(e) => handleClick(e, index)}
@@ -100,8 +99,12 @@ const ProjectTimeLine = () => {
                   </TagList>
                 </div>
                 <UtilityList>
-                  <ExternalLinks href={visits}>Code</ExternalLinks>
-                  <ExternalLinks href={source}>Source</ExternalLinks>
+                  <ExternalLinks key={index} href={visits}>
+                    Code
+                  </ExternalLinks>
+                  <ExternalLinks key={index} href={source}>
+                    Source
+                  </ExternalLinks>
                 </UtilityList>
               </CarouselItem>
             </CarouselMobileScrollNode>
