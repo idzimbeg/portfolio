@@ -10,6 +10,9 @@ import {
   Textarea,
 } from "./ContactFormStyles.js";
 import Button from "../../styles/GlobalComponents/Button";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = (props) => {
   const [toSend, setToSend] = useState({
@@ -28,14 +31,17 @@ const ContactForm = (props) => {
     )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        toast.success("Thanks for reaching out!");
         setToSend({
           from_name: "",
           message: "",
           reply_to: "",
+          show: false,
         });
       })
       .catch((err) => {
         console.log("FAILED...", err);
+        toast.error("Something went wrong!");
       });
   };
   const handleChange = (e) => {
@@ -46,7 +52,7 @@ const ContactForm = (props) => {
     <Backdrop>
       <Form action="" onSubmit={handleOnSubmit}>
         <Close>
-          <CloseButton href="#" onClick={props.onClose} />
+          <CloseButton href="/" onClick={props.onClose} />
         </Close>
         <br />
         <Input
@@ -78,6 +84,7 @@ const ContactForm = (props) => {
         <br />
         <Button>Send</Button>
       </Form>
+      <ToastContainer theme="dark" />
     </Backdrop>
   );
 };

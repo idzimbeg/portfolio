@@ -11,7 +11,6 @@ const Portal = ({ show, onClose }) => {
   }, []);
 
   const handleCloseClick = (e) => {
-    e.preventDefault();
     onClose();
   };
 
